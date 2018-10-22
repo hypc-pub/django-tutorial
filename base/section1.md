@@ -1,4 +1,4 @@
-# 编写第一个Django应用 -- 创建一个项目
+# 编写第一个Django应用 -- Create a project
 
 ## 创建一个项目
 

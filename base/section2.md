@@ -177,7 +177,7 @@ class Choice(models.Model):
 也可以为model添加自定义函数：
 
 ```python
-from datetime import datetime
+from datetime import timedelta
 
 from django.db import models
 from django.utils import timezone
