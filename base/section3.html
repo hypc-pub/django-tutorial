@@ -1,0 +1,410 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Views & Urls & Forms · Django Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-simpletabs/tabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="section4.html" />
+    
+    
+    <link rel="prev" href="section2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Django Tutorial</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="section4.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="section2.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">简介</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            Django简介
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="install.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Django安装
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">编写第一个Django应用</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="section1.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Create a project
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="section2.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Models & Admin site
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="section3.html" class="list-group-item active">
+        
+
+            
+
+            
+
+            Views & Urls & Forms
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="section4.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Testing
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="&#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;django&#x5E94;&#x7528;----views--urls--forms">&#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;Django&#x5E94;&#x7528; -- Views &amp; Urls &amp; Forms</h1>
+<h2 id="&#x7F16;&#x5199;&#x66F4;&#x591A;&#x7684;view">&#x7F16;&#x5199;&#x66F4;&#x591A;&#x7684;View</h2>
+<p>&#x6211;&#x4EEC;&#x7684;View&#x90FD;&#x662F;&#x57FA;&#x4E8E;<a href="https://docs.djangoproject.com/en/2.1/ref/class-based-views/base/" target="_blank">Base views</a>&#x800C;&#x7F16;&#x5199;&#x7684;&#x3002;</p>
+<p>&#x6253;&#x5F00;<code>polls/views.py</code>&#x6587;&#x4EF6;&#xFF0C;&#x5C06;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x4FEE;&#x6539;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>http <span class="token keyword">import</span> HttpResponse
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>views <span class="token keyword">import</span> View
+
+<span class="token keyword">class</span> <span class="token class-name">IndexView</span><span class="token punctuation">(</span>View<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">&quot;Hello, world. You&apos;re at the polls index.&quot;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">DetailView</span><span class="token punctuation">(</span>View<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">,</span> question_id<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">&quot;You&apos;re looking at question %s.&quot;</span> <span class="token operator">%</span> question_id<span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ResultsView</span><span class="token punctuation">(</span>View<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">,</span> question_id<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        response <span class="token operator">=</span> <span class="token string">&quot;You&apos;re looking at the results of question %s.&quot;</span>
+        <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span>response <span class="token operator">%</span> question_id<span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">VoteView</span><span class="token punctuation">(</span>View<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">,</span> question_id<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">&quot;You&apos;re voting on question %s.&quot;</span> <span class="token operator">%</span> question_id<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x4FEE;&#x6539;<code>polls/urls.py</code>&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x4FEE;&#x6539;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> path
+
+<span class="token keyword">from</span> <span class="token punctuation">.</span>views <span class="token keyword">import</span> IndexView<span class="token punctuation">,</span> DetailView<span class="token punctuation">,</span> ResultsView<span class="token punctuation">,</span> VoteView
+
+<span class="token comment"># ex: /polls/...</span>
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    path<span class="token punctuation">(</span><span class="token string">&apos;&apos;</span><span class="token punctuation">,</span> IndexView<span class="token punctuation">.</span>as_view<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">&apos;index&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    path<span class="token punctuation">(</span><span class="token string">&apos;&lt;int:question_id&gt;/&apos;</span><span class="token punctuation">,</span> DetailView<span class="token punctuation">.</span>as_view<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">&apos;detail&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    path<span class="token punctuation">(</span><span class="token string">&apos;&lt;int:question_id&gt;/results/&apos;</span><span class="token punctuation">,</span> ResultsView<span class="token punctuation">.</span>as_view<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">&apos;results&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    path<span class="token punctuation">(</span><span class="token string">&apos;&lt;int:question_id&gt;/vote/&apos;</span><span class="token punctuation">,</span> VoteView<span class="token punctuation">.</span>as_view<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">&apos;vote&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x53EF;&#x4EE5;&#x542F;&#x52A8;&#x670D;&#x52A1;&#xFF0C;&#x8BBF;&#x95EE; <a href="http://127.0.0.1:8000/polls/1/" target="_blank">http://127.0.0.1:8000/polls/1/</a> &#x67E5;&#x770B;&#x6548;&#x679C;&#x3002;</p>
+<h2 id="&#x8BA9;view&#x505A;&#x4E00;&#x4E9B;&#x771F;&#x5B9E;&#x7684;&#x4E8B;&#x60C5;">&#x8BA9;View&#x505A;&#x4E00;&#x4E9B;&#x771F;&#x5B9E;&#x7684;&#x4E8B;&#x60C5;</h2>
+<p>&#x540C;&#x6837;&#xFF0C;&#x6253;&#x5F00;<code>polls/views.py</code>&#x6587;&#x4EF6;&#xFF0C;&#x4FEE;&#x6539;<code>IndexView</code>&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>http <span class="token keyword">import</span> HttpResponse
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>views <span class="token keyword">import</span> View
+
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Question
+
+<span class="token keyword">class</span> <span class="token class-name">IndexView</span><span class="token punctuation">(</span>View<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        latest_question_list <span class="token operator">=</span> Question<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>order_by<span class="token punctuation">(</span><span class="token string">&apos;-pub_date&apos;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span>
+        output <span class="token operator">=</span> <span class="token string">&apos;, &apos;</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">[</span>q<span class="token punctuation">.</span>question_text <span class="token keyword">for</span> q <span class="token keyword">in</span> latest_question_list<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span>output<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x542F;&#x52A8;&#x670D;&#x52A1;&#xFF0C;&#x8BBF;&#x95EE; <a href="http://127.0.0.1:8000/polls/" target="_blank">http://127.0.0.1:8000/polls/</a> &#x67E5;&#x770B;&#x6548;&#x679C;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;form">&#x4F7F;&#x7528;Form</h2>
+<p>&#x9996;&#x5148;&#xFF0C;&#x65B0;&#x5EFA;&#x6587;&#x4EF6;<code>polls/forms.py</code>&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<a href="https://docs.djangoproject.com/en/2.1/ref/forms/api/#django.forms.Form" target="_blank">Form</a>&#x7C7B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> django <span class="token keyword">import</span> forms
+
+<span class="token keyword">class</span> <span class="token class-name">QuestionIndexForm</span><span class="token punctuation">(</span>forms<span class="token punctuation">.</span>Form<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    question_text <span class="token operator">=</span> forms<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">&apos;question_text&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x4FEE;&#x6539;<code>polls/views.py</code>&#x6587;&#x4EF6;&#x7684;<code>IndexView</code>&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>http <span class="token keyword">import</span> HttpResponse
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>views <span class="token keyword">import</span> View
+
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Question
+<span class="token keyword">from</span> <span class="token punctuation">.</span>forms <span class="token keyword">import</span> QuestionIndexForm
+
+<span class="token keyword">class</span> <span class="token class-name">IndexView</span><span class="token punctuation">(</span>View<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        form <span class="token operator">=</span> QuestionIndexForm<span class="token punctuation">(</span>request<span class="token punctuation">.</span>GET<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token operator">not</span> form<span class="token punctuation">.</span>is_valid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">&apos;&apos;</span><span class="token punctuation">,</span> status<span class="token operator">=</span><span class="token number">422</span><span class="token punctuation">)</span>
+
+        data <span class="token operator">=</span> form<span class="token punctuation">.</span>cleaned_data
+        latest_question_list <span class="token operator">=</span> Question<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>
+            question_text__contains<span class="token operator">=</span>data<span class="token punctuation">[</span><span class="token string">&apos;question_text&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>order_by<span class="token punctuation">(</span><span class="token string">&apos;-pub_date&apos;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span>
+        output <span class="token operator">=</span> <span class="token string">&apos;, &apos;</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">[</span>q<span class="token punctuation">.</span>question_text <span class="token keyword">for</span> q <span class="token keyword">in</span> latest_question_list<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span>output<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x542F;&#x52A8;&#x670D;&#x52A1;&#xFF0C;&#x8BBF;&#x95EE; <a href="http://127.0.0.1:8000/polls/?question_text=What" target="_blank">http://127.0.0.1:8000/polls/?question_text=What</a> &#x67E5;&#x770B;&#x6548;&#x679C;&#x3002;</p>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-simpletabs/tabs.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"Views & Urls & Forms","level":"2.3","depth":1,"next":{"title":"Testing","level":"2.4","depth":1,"path":"base/section4.md","ref":"base/section4.md","articles":[]},"previous":{"title":"Models & Admin site","level":"2.2","depth":1,"path":"base/section2.md","ref":"base/section2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","ace","codeblock-label","simpletabs","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"codeblock-label":{},"include":{},"search-pro":{},"theme-opendocs":{},"simpletabs":{},"katex":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/django-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Django Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"base/section3.md","mtime":"2018-10-22T09:15:36.046Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-22T09:17:11.316Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+

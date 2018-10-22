@@ -1,0 +1,11 @@
+version: "2"
+services:
+    master:
+        build:
+            context: ..
+            dockerfile: .docker/Dockerfile
+        image: django-tutorial
+        container_name: django-tutorial
+        ports:
+            - 4060:4000
+        restart: always

@@ -1,0 +1,565 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Models & Admin site · Django Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-simpletabs/tabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="section3.html" />
+    
+    
+    <link rel="prev" href="section1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Django Tutorial</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="section3.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="section1.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">简介</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            Django简介
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="install.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Django安装
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">编写第一个Django应用</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="section1.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Create a project
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="section2.html" class="list-group-item active">
+        
+
+            
+
+            
+
+            Models & Admin site
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="section3.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Views & Urls & Forms
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="section4.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Testing
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="&#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;django&#x5E94;&#x7528;----models--admin-site">&#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;Django&#x5E94;&#x7528; -- Models &amp; Admin site</h1>
+<h2 id="&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x7F6E;">&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x7F6E;</h2>
+<p>&#x6253;&#x5F00;<code>mysite/settings.py</code>&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x91CC;&#x9762;&#x90FD;&#x662F;&#x4E00;&#x4E9B;Django&#x914D;&#x7F6E;&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;Django&#x4F7F;&#x7528;SQLite&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5F53;&#x7136;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x66FF;&#x6362;&#x6210;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x5E93;&#x3002;</p>
+<pre class="language-"><code class="lang-python">DATABASES <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">&apos;default&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&apos;ENGINE&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;django.db.backends.sqlite3&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;NAME&apos;</span><span class="token punctuation">:</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>BASE_DIR<span class="token punctuation">,</span> <span class="token string">&apos;db.sqlite3&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>ENGINE: &#x53EF;&#x4EE5;&#x662F;<code>django.db.backends.sqlite3</code>&#x3001;<code>django.db.backends.postgresql</code>&#x3001;
+  <code>django.db.backends.mysql</code>&#x3001;<code>django.db.backends.oracle</code>&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;<a href="https://docs.djangoproject.com/en/2.1/ref/databases/#third-party-notes" target="_blank">&#x5176;&#x4ED6;&#x53EF;&#x80FD;&#x7684;&#x503C;</a>&#xFF1B;</li>
+<li>NAME: &#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;&#x3002;&#x5982;&#x679C;&#x4F7F;&#x7528;SQLite&#xFF0C;&#x90A3;&#x5B83;&#x662F;&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x3002;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528;SQLite&#x6570;&#x636E;&#x5E93;&#x4E4B;&#x5916;&#x7684;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x90A3;&#x4E48;&#x8FD8;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x914D;&#x7F6E;&#xFF0C;&#x5982;<code>USER</code>&#x3001;<code>PASSWORD</code>&#x3001;<code>HOST</code>&#x3002;
+&#x5177;&#x4F53;&#x53C2;&#x89C1;<a href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-DATABASES" target="_blank">DATABASES</a>&#x3002;</p>
+<p>&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x7F6E;&#x5B8C;&#x4E4B;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x5C06;<a href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-TIME_ZONE" target="_blank">TIME_ZONE</a>&#x8BBE;&#x7F6E;&#x4E3A;&#x4F60;&#x6240;&#x5728;&#x7684;&#x65F6;&#x533A;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#x8FD8;&#x9700;&#x8981;&#x6CE8;&#x610F;<a href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS" target="_blank">INSTALLED_APPS</a>&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x5728;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x4E2D;&#x7528;&#x5230;&#x7684;App&#xFF0C;&#x91CC;&#x9762;&#x6709;&#x4E00;&#x4E9B;&#x9ED8;&#x8BA4;&#x7684;&#x8BBE;&#x7F6E;&#xFF1A;</p>
+<ul>
+<li><code>django.contrib.admin</code>: Admin site&#xFF1B;</li>
+<li><code>django.contrib.auth</code>: &#x4E00;&#x4E2A;&#x6388;&#x6743;&#x7CFB;&#x7EDF;&#xFF1B;</li>
+<li><code>django.contrib.contenttypes</code>: content type&#x6846;&#x67B6;&#xFF1B;</li>
+<li><code>django.contrib.sessions</code>: session&#x6846;&#x67B6;&#xFF1B;</li>
+<li><code>django.contrib.messages</code>: &#x6D88;&#x606F;&#x6846;&#x67B6;&#xFF1B;</li>
+<li><code>django.contrib.staticfiles</code>: &#x7BA1;&#x7406;&#x9759;&#x6001;&#x6587;&#x4EF6;&#x7684;&#x6846;&#x67B6;&#x3002;</li>
+</ul>
+<p>&#x5176;&#x4E2D;&#x4E00;&#x4E9B;App&#x7528;&#x5230;&#x4E86;&#x6570;&#x636E;&#x5E93;&#x8868;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x4F7F;&#x7528;&#x4E4B;&#x524D;&#x9700;&#x8981;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x521B;&#x5EFA;&#x8FD9;&#x4E9B;&#x8868;&#xFF0C;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">python manage.py migrate
+</code></pre>
+<h2 id="&#x521B;&#x5EFA;models">&#x521B;&#x5EFA;models</h2>
+<p>&#x73B0;&#x5728;&#x5F00;&#x59CB;&#x5B9A;&#x4E49;models&#xFF0C;&#x5B83;&#x672C;&#x8D28;&#x4E0A;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;&#x6570;&#x636E;&#x5E93;&#x8868;&#x7ED3;&#x6784;&#x3002;</p>
+<p>&#x6253;&#x5F00;<code>polls/models.py</code>&#x6587;&#x4EF6;&#xFF0C;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
+
+
+<span class="token keyword">class</span> <span class="token class-name">Question</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    question_text <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">200</span><span class="token punctuation">)</span>
+    pub_date <span class="token operator">=</span> models<span class="token punctuation">.</span>DateTimeField<span class="token punctuation">(</span><span class="token string">&apos;date published&apos;</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Choice</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    question <span class="token operator">=</span> models<span class="token punctuation">.</span>ForeignKey<span class="token punctuation">(</span>Question<span class="token punctuation">,</span> on_delete<span class="token operator">=</span>models<span class="token punctuation">.</span>CASCADE<span class="token punctuation">)</span>
+    choice_text <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">200</span><span class="token punctuation">)</span>
+    votes <span class="token operator">=</span> models<span class="token punctuation">.</span>IntegerField<span class="token punctuation">(</span>default<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x5B9A;&#x4E49;&#x4E86;&#x4E24;&#x4E2A;model&#xFF1A;<code>Question</code>&#x3001;<code>Choice</code>&#xFF0C;&#x4ED6;&#x4EEC;&#x90FD;&#x662F;<a href="https://docs.djangoproject.com/en/2.1/ref/models/instances/#django.db.models.Model" target="_blank">django.db.models.Model</a>&#x5B50;&#x7C7B;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x90FD;&#x662F;<a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#django.db.models.Field" target="_blank">Field</a>&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x3002;&#x4F8B;&#x5982;<a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#django.db.models.CharField" target="_blank">CharField</a>&#x3001;<a href="https://docs.djangoproject.com/en/2.1/ref/models/fields/#django.db.models.DateTimeField" target="_blank">DateTimeField</a>&#x7B49;&#x3002;</p>
+<h2 id="&#x6FC0;&#x6D3B;models">&#x6FC0;&#x6D3B;models</h2>
+<p>&#x5728;&#x9879;&#x76EE;&#x9700;&#x8981;&#x6DFB;&#x52A0;polls app&#xFF0C;&#x9700;&#x8981;&#x5728;<a href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS" target="_blank">INSTALLED_APPS</a>&#x4E2D;&#x6DFB;&#x52A0;<code>polls.apps.PollsConfig</code>&#x7C7B;&#xFF0C;
+&#x6253;&#x5F00;<code>mysite/settings.py</code>&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x6309;&#x5982;&#x4E0B;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">&apos;polls.apps.PollsConfig&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;django.contrib.admin&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;django.contrib.auth&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;django.contrib.contenttypes&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;django.contrib.sessions&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;django.contrib.messages&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;django.contrib.staticfiles&apos;</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+<p>&#x8BBE;&#x7F6E;<a href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS" target="_blank">INSTALLED_APPS</a>&#x540E;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ python manage.py makemigrations polls
+Migrations <span class="token keyword">for</span> <span class="token string">&apos;polls&apos;</span><span class="token keyword">:</span>
+  polls/migrations/0001_initial.py:
+    - Create model Choice
+    - Create model Question
+    - Add field question to choice
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x8FD0;&#x884C;<code>makemigrations</code>&#xFF0C;&#x544A;&#x8BC9;Django&#x5DF2;&#x5BF9;model&#x8FDB;&#x884C;&#x4E86;&#x4E00;&#x4E9B;&#x66F4;&#x6539;&#xFF08;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x662F;&#x521B;&#x5EFA;&#x4E86;&#x65B0;&#x6A21;&#x578B;&#xFF09;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x66F4;&#x6539;&#x5B58;&#x50A8;&#x4E3A;&#x8FC1;&#x79FB;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<a href="https://docs.djangoproject.com/en/2.1/ref/django-admin/#django-admin-migrate" target="_blank">migrate</a>&#x547D;&#x4EE4;&#x81EA;&#x52A8;&#x7BA1;&#x7406;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<a href="https://docs.djangoproject.com/en/2.1/ref/django-admin/#django-admin-sqlmigrate" target="_blank">sqlmigrate</a>&#x547D;&#x4EE4;&#x5BFC;&#x51FA;SQL&#x8BED;&#x53E5;&#x3002;
+&#x6267;&#x884C;<a href="https://docs.djangoproject.com/en/2.1/ref/django-admin/#django-admin-migrate" target="_blank">migrate</a>&#x547D;&#x4EE4;&#xFF0C;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, polls, sessions
+Running migrations:
+  Rendering model states<span class="token punctuation">..</span>. DONE
+  Applying polls.0001_initial<span class="token punctuation">..</span>. OK
+</code></pre>
+<h2 id="&#x4F7F;&#x7528;database-api">&#x4F7F;&#x7528;<a href="https://docs.djangoproject.com/en/2.1/topics/db/queries/" target="_blank">database API</a></h2>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;django&#x4EA4;&#x4E92;&#x5F0F;&#x547D;&#x4EE4;&#x884C;&#x6765;&#x4F7F;&#x7528;<a href="https://docs.djangoproject.com/en/2.1/topics/db/queries/" target="_blank">database API</a>&#xFF0C;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">python manage.py shell
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<a href="https://docs.djangoproject.com/en/2.1/topics/db/queries/" target="_blank">database API</a>&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">from</span> polls<span class="token punctuation">.</span>models <span class="token keyword">import</span> Choice<span class="token punctuation">,</span> Question
+<span class="token comment"># &#x73B0;&#x5728;&#x8FD8;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;Question</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> Question<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>QuerySet <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>
+
+<span class="token comment"># &#x521B;&#x5EFA;&#x4E00;&#x4E2A;Question&#x5E76;&#x4FDD;&#x5B58;</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">from</span> django<span class="token punctuation">.</span>utils <span class="token keyword">import</span> timezone
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> q <span class="token operator">=</span> Question<span class="token punctuation">(</span>question_text<span class="token operator">=</span><span class="token string">&quot;What&apos;s new?&quot;</span><span class="token punctuation">,</span> pub_date<span class="token operator">=</span>timezone<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> q<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> q<span class="token punctuation">.</span><span class="token builtin">id</span>
+<span class="token number">1</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> q<span class="token punctuation">.</span>question_text
+<span class="token string">&quot;What&apos;s new?&quot;</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> q<span class="token punctuation">.</span>pub_date
+datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">(</span><span class="token number">2018</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">51</span><span class="token punctuation">,</span> <span class="token number">932745</span><span class="token punctuation">,</span> tzinfo<span class="token operator">=</span><span class="token operator">&lt;</span>UTC<span class="token operator">&gt;</span><span class="token punctuation">)</span>
+
+<span class="token comment"># &#x4FEE;&#x6539;q.question_text&#x503C;&#x5E76;&#x4FDD;&#x5B58;</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> q<span class="token punctuation">.</span>question_text <span class="token operator">=</span> <span class="token string">&quot;What&apos;s up?&quot;</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> q<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># &#x67E5;&#x770B;&#x6240;&#x6709;&#x7684;Question</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> Question<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>QuerySet <span class="token punctuation">[</span><span class="token operator">&lt;</span>Question<span class="token punctuation">:</span> Question <span class="token builtin">object</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>
+</code></pre>
+<p>&#x7B49;&#x7B49;&#xFF0C;<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">Question:</span></span> <span class="token attr-name">Question</span> <span class="token attr-name">object</span> <span class="token attr-name">(1)</span><span class="token punctuation">&gt;</span></span></code>&#x663E;&#x793A;&#x6548;&#x679C;&#x5E76;&#x4E0D;&#x662F;&#x5F88;&#x53CB;&#x597D;&#xFF0C;
+&#x6253;&#x5F00;<code>polls/models.py</code>&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4E3A;<code>Question</code>&#x548C;<code>Choice</code>&#x6DFB;&#x52A0;<code>__str__</code>&#x51FD;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
+
+<span class="token keyword">class</span> <span class="token class-name">Question</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># ...</span>
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>question_text
+
+<span class="token keyword">class</span> <span class="token class-name">Choice</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># ...</span>
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>choice_text
+</code></pre>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x4E3A;model&#x6DFB;&#x52A0;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> datetime <span class="token keyword">import</span> timedelta
+
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>utils <span class="token keyword">import</span> timezone
+
+
+<span class="token keyword">class</span> <span class="token class-name">Question</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># ...</span>
+    <span class="token keyword">def</span> <span class="token function">was_published_recently</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>pub_date <span class="token operator">&gt;=</span> timezone<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> timedelta<span class="token punctuation">(</span>days<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x518D;&#x6B21;&#x6267;&#x884C;&#x547D;&#x4EE4;<code>python manage.py shell</code>&#x6253;&#x5F00;django shell&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">from</span> polls<span class="token punctuation">.</span>models <span class="token keyword">import</span> Choice<span class="token punctuation">,</span> Question
+
+<span class="token comment"># Make sure our __str__() addition worked.</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> Question<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>QuerySet <span class="token punctuation">[</span><span class="token operator">&lt;</span>Question<span class="token punctuation">:</span> What&apos;s up?<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>
+
+<span class="token comment"># Django provides a rich database lookup API that&apos;s entirely driven by</span>
+<span class="token comment"># keyword arguments.</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> Question<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>QuerySet <span class="token punctuation">[</span><span class="token operator">&lt;</span>Question<span class="token punctuation">:</span> What&apos;s up?<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> Question<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>question_text__startswith<span class="token operator">=</span><span class="token string">&apos;What&apos;</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>QuerySet <span class="token punctuation">[</span><span class="token operator">&lt;</span>Question<span class="token punctuation">:</span> What&apos;s up?<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>
+
+<span class="token comment"># Get the question that was published this year.</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">from</span> django<span class="token punctuation">.</span>utils <span class="token keyword">import</span> timezone
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> current_year <span class="token operator">=</span> timezone<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>year
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> Question<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span>pub_date__year<span class="token operator">=</span>current_year<span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>Question<span class="token punctuation">:</span> What&apos;s up?<span class="token operator">&gt;</span>
+
+<span class="token comment"># Request an ID that doesn&apos;t exist, this will raise an exception.</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> Question<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token builtin">id</span><span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
+Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+DoesNotExist<span class="token punctuation">:</span> Question matching query does <span class="token operator">not</span> exist<span class="token punctuation">.</span>
+
+<span class="token comment"># Lookup by a primary key is the most common case, so Django provides a</span>
+<span class="token comment"># shortcut for primary-key exact lookups.</span>
+<span class="token comment"># The following is identical to Question.objects.get(id=1).</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> Question<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span>pk<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>Question<span class="token punctuation">:</span> What&apos;s up?<span class="token operator">&gt;</span>
+
+<span class="token comment"># Make sure our custom method worked.</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> q <span class="token operator">=</span> Question<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span>pk<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> q<span class="token punctuation">.</span>was_published_recently<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token boolean">True</span>
+
+<span class="token comment"># Give the Question a couple of Choices. The create call constructs a new</span>
+<span class="token comment"># Choice object, does the INSERT statement, adds the choice to the set</span>
+<span class="token comment"># of available choices and returns the new Choice object. Django creates</span>
+<span class="token comment"># a set to hold the &quot;other side&quot; of a ForeignKey relation</span>
+<span class="token comment"># (e.g. a question&apos;s choice) which can be accessed via the API.</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> q <span class="token operator">=</span> Question<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span>pk<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Display any choices from the related object set -- none so far.</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> q<span class="token punctuation">.</span>choice_set<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>QuerySet <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>
+
+<span class="token comment"># Create three choices.</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> q<span class="token punctuation">.</span>choice_set<span class="token punctuation">.</span>create<span class="token punctuation">(</span>choice_text<span class="token operator">=</span><span class="token string">&apos;Not much&apos;</span><span class="token punctuation">,</span> votes<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>Choice<span class="token punctuation">:</span> Not much<span class="token operator">&gt;</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> q<span class="token punctuation">.</span>choice_set<span class="token punctuation">.</span>create<span class="token punctuation">(</span>choice_text<span class="token operator">=</span><span class="token string">&apos;The sky&apos;</span><span class="token punctuation">,</span> votes<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>Choice<span class="token punctuation">:</span> The sky<span class="token operator">&gt;</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> c <span class="token operator">=</span> q<span class="token punctuation">.</span>choice_set<span class="token punctuation">.</span>create<span class="token punctuation">(</span>choice_text<span class="token operator">=</span><span class="token string">&apos;Just hacking again&apos;</span><span class="token punctuation">,</span> votes<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Choice objects have API access to their related Question objects.</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> c<span class="token punctuation">.</span>question
+<span class="token operator">&lt;</span>Question<span class="token punctuation">:</span> What&apos;s up?<span class="token operator">&gt;</span>
+
+<span class="token comment"># And vice versa: Question objects get access to Choice objects.</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> q<span class="token punctuation">.</span>choice_set<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>QuerySet <span class="token punctuation">[</span><span class="token operator">&lt;</span>Choice<span class="token punctuation">:</span> Not much<span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Choice<span class="token punctuation">:</span> The sky<span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Choice<span class="token punctuation">:</span> Just hacking again<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> q<span class="token punctuation">.</span>choice_set<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">3</span>
+
+<span class="token comment"># The API automatically follows relationships as far as you need.</span>
+<span class="token comment"># Use double underscores to separate relationships.</span>
+<span class="token comment"># This works as many levels deep as you want; there&apos;s no limit.</span>
+<span class="token comment"># Find all Choices for any question whose pub_date is in this year</span>
+<span class="token comment"># (reusing the &apos;current_year&apos; variable we created above).</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> Choice<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>question__pub_date__year<span class="token operator">=</span>current_year<span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>QuerySet <span class="token punctuation">[</span><span class="token operator">&lt;</span>Choice<span class="token punctuation">:</span> Not much<span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Choice<span class="token punctuation">:</span> The sky<span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Choice<span class="token punctuation">:</span> Just hacking again<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>
+
+<span class="token comment"># Let&apos;s delete one of the choices. Use delete() for that.</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> c <span class="token operator">=</span> q<span class="token punctuation">.</span>choice_set<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>choice_text__startswith<span class="token operator">=</span><span class="token string">&apos;Just hacking&apos;</span><span class="token punctuation">)</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> c<span class="token punctuation">.</span>delete<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="django-admin">Django Admin</h2>
+<h3 id="&#x521B;&#x5EFA;&#x7BA1;&#x7406;&#x5458;&#x5E10;&#x53F7;">&#x521B;&#x5EFA;&#x7BA1;&#x7406;&#x5458;&#x5E10;&#x53F7;</h3>
+<p>&#x9996;&#x5148;&#x521B;&#x5EFA;&#x7BA1;&#x7406;&#x5458;&#x5E10;&#x53F7;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">python manage.py createsuperuser
+</code></pre>
+<p>&#x7136;&#x540E;&#x6309;&#x7167;&#x63D0;&#x793A;&#x8F93;&#x5165;&#x7528;&#x6237;&#x540D;&#x3001;&#x90AE;&#x7BB1;&#x3001;&#x5BC6;&#x7801;&#x3002;</p>
+<h3 id="&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5E76;&#x767B;&#x5F55;">&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5E76;&#x767B;&#x5F55;</h3>
+<p>&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">python manage.py runserver
+</code></pre>
+<p>&#x7136;&#x540E;&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x7F51;&#x9875; <a href="http://127.0.0.1:8000/admin/" target="_blank">http://127.0.0.1:8000/admin/</a> &#xFF0C;&#x8F93;&#x5165;&#x4E0A;&#x4E00;&#x6B65;&#x521B;&#x5EFA;&#x7684;&#x5E10;&#x53F7;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#x3002;</p>
+<h3 id="&#x8BA9;polls&#x5728;admin-site&#x4E2D;&#x53EF;&#x89C1;">&#x8BA9;polls&#x5728;admin site&#x4E2D;&#x53EF;&#x89C1;</h3>
+<p>&#x767B;&#x5F55;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5728;admin site&#x9875;&#x9762;&#x4E2D;&#x5E76;&#x6CA1;&#x6709;&#x53D1;&#x73B0;polls app&#x3002;</p>
+<p>&#x4FEE;&#x6539;<code>polls/admin.py</code>&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Question
+
+admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Question<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD9;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5728;admin site&#x9875;&#x9762;&#x4E2D;&#x770B;&#x5230;polls app&#xFF0C;&#x5E76;&#x5728;&#x4E0B;&#x9762;&#x770B;&#x5230;Questi model&#x3002;</p>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-simpletabs/tabs.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"Models & Admin site","level":"2.2","depth":1,"next":{"title":"Views & Urls & Forms","level":"2.3","depth":1,"path":"base/section3.md","ref":"base/section3.md","articles":[]},"previous":{"title":"Create a project","level":"2.1","depth":1,"path":"base/section1.md","ref":"base/section1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","ace","codeblock-label","simpletabs","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"codeblock-label":{},"include":{},"search-pro":{},"theme-opendocs":{},"simpletabs":{},"katex":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/django-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Django Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"base/section2.md","mtime":"2018-10-22T09:15:36.046Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-22T09:17:11.316Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+

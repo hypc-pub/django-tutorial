@@ -1,0 +1,422 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Testing · Django Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-simpletabs/tabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    
+    <link rel="prev" href="section3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Django Tutorial</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                
+                <a href="section3.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">简介</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            Django简介
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="install.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Django安装
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">编写第一个Django应用</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="section1.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Create a project
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="section2.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Models & Admin site
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="section3.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Views & Urls & Forms
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="section4.html" class="list-group-item active">
+        
+
+            
+
+            
+
+            Testing
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="&#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;django&#x5E94;&#x7528;----testing">&#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;Django&#x5E94;&#x7528; -- Testing</h1>
+<h2 id="&#x7B2C;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;">&#x7B2C;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;</h2>
+<p>&#x6253;&#x5F00;&#x6587;&#x4EF6;<code>polls/tests.py</code>&#xFF0C;&#x7F16;&#x8F91;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> datetime
+
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>test <span class="token keyword">import</span> TestCase
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>utils <span class="token keyword">import</span> timezone
+
+<span class="token keyword">from</span> <span class="token punctuation">.</span>models <span class="token keyword">import</span> Question
+
+
+<span class="token keyword">class</span> <span class="token class-name">QuestionModelTests</span><span class="token punctuation">(</span>TestCase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">test_was_published_recently_with_future_question</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        was_published_recently() returns False for questions whose pub_date
+        is in the future.
+        &quot;&quot;&quot;</span>
+        time <span class="token operator">=</span> timezone<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> datetime<span class="token punctuation">.</span>timedelta<span class="token punctuation">(</span>days<span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">)</span>
+        future_question <span class="token operator">=</span> Question<span class="token punctuation">(</span>pub_date<span class="token operator">=</span>time<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>assertIs<span class="token punctuation">(</span>future_question<span class="token punctuation">.</span>was_published_recently<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">False</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;">&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;</h2>
+<p>&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ python manage.py <span class="token function">test</span> polls
+Creating <span class="token function">test</span> database <span class="token keyword">for</span> <span class="token function">alias</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">..</span>.
+System check identified no issues <span class="token punctuation">(</span>0 silenced<span class="token punctuation">)</span>.
+F
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+FAIL: test_was_published_recently_with_future_question <span class="token punctuation">(</span>polls.tests.QuestionModelTests<span class="token punctuation">)</span>
+----------------------------------------------------------------------
+Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>:
+  File <span class="token string">&quot;/path/to/mysite/polls/tests.py&quot;</span>, line 16, <span class="token keyword">in</span> test_was_published_recently_with_future_question
+    self.assertIs<span class="token punctuation">(</span>future_question.was_published_recently<span class="token punctuation">(</span><span class="token punctuation">)</span>, False<span class="token punctuation">)</span>
+AssertionError: True is not False
+
+----------------------------------------------------------------------
+Ran 1 <span class="token function">test</span> <span class="token keyword">in</span> 0.001s
+
+FAILED <span class="token punctuation">(</span>failures<span class="token operator">=</span>1<span class="token punctuation">)</span>
+Destroying <span class="token function">test</span> database <span class="token keyword">for</span> <span class="token function">alias</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">..</span>.
+</code></pre>
+<p>&#x6267;&#x884C;&#x5B8C;&#x53D1;&#x73B0;&#x4E00;&#x4E2A;bug&#xFF0C;&#x6253;&#x5F00;&#x6587;&#x4EF6;<code>polls/models.py</code>&#x4FEE;&#x590D;&#x8FD9;&#x4E2A;bug&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">was_published_recently</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    now <span class="token operator">=</span> timezone<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> now <span class="token operator">-</span> datetime<span class="token punctuation">.</span>timedelta<span class="token punctuation">(</span>days<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&lt;=</span> self<span class="token punctuation">.</span>pub_date <span class="token operator">&lt;=</span> now
+</code></pre>
+<p>&#x518D;&#x6B21;&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$ python manage.py <span class="token function">test</span> polls
+Creating <span class="token function">test</span> database <span class="token keyword">for</span> <span class="token function">alias</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">..</span>.
+System check identified no issues <span class="token punctuation">(</span>0 silenced<span class="token punctuation">)</span>.
+<span class="token keyword">.</span>
+----------------------------------------------------------------------
+Ran 1 <span class="token function">test</span> <span class="token keyword">in</span> 0.001s
+
+OK
+Destroying <span class="token function">test</span> database <span class="token keyword">for</span> <span class="token function">alias</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">..</span>.
+</code></pre>
+<h2 id="&#x6D4B;&#x8BD5;view">&#x6D4B;&#x8BD5;View</h2>
+<p>Django&#x63D0;&#x4F9B;<a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#django.test.Client" target="_blank">Client</a>&#x7528;&#x6765;&#x6D4B;&#x8BD5;View&#xFF0C;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> datetime <span class="token keyword">import</span> timedelta
+
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>test <span class="token keyword">import</span> TestCase
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> reverse
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>utils <span class="token keyword">import</span> timezone
+
+
+<span class="token keyword">def</span> <span class="token function">create_question</span><span class="token punctuation">(</span>question_text<span class="token punctuation">,</span> days<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    Create a question with the given `question_text` and published the
+    given number of `days` offset to now (negative for questions published
+    in the past, positive for questions that have yet to be published).
+    &quot;&quot;&quot;</span>
+    time <span class="token operator">=</span> timezone<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> timedelta<span class="token punctuation">(</span>days<span class="token operator">=</span>days<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> Question<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>create<span class="token punctuation">(</span>question_text<span class="token operator">=</span>question_text<span class="token punctuation">,</span> pub_date<span class="token operator">=</span>time<span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">QuestionIndexViewTests</span><span class="token punctuation">(</span>TestCase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">test_no_questions</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        If no questions exist, an appropriate message is displayed.
+        &quot;&quot;&quot;</span>
+        <span class="token comment"># &#x8FD9;&#x91CC;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528; self.client.get(&apos;polls/&apos;) &#x8BF7;&#x6C42;</span>
+        response <span class="token operator">=</span> self<span class="token punctuation">.</span>client<span class="token punctuation">.</span>get<span class="token punctuation">(</span>reverse<span class="token punctuation">(</span><span class="token string">&apos;polls:index&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>assertEqual<span class="token punctuation">(</span>response<span class="token punctuation">.</span>status_code<span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>assertContains<span class="token punctuation">(</span>response<span class="token punctuation">,</span> <span class="token string">&quot;No polls are available.&quot;</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>assertQuerysetEqual<span class="token punctuation">(</span>response<span class="token punctuation">.</span>context<span class="token punctuation">[</span><span class="token string">&apos;latest_question_list&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">QuestionDetailViewTests</span><span class="token punctuation">(</span>TestCase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">test_future_question</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        The detail view of a question with a pub_date in the future
+        returns a 404 not found.
+        &quot;&quot;&quot;</span>
+        future_question <span class="token operator">=</span> create_question<span class="token punctuation">(</span>question_text<span class="token operator">=</span><span class="token string">&apos;Future question.&apos;</span><span class="token punctuation">,</span> days<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>
+        url <span class="token operator">=</span> reverse<span class="token punctuation">(</span><span class="token string">&apos;polls:detail&apos;</span><span class="token punctuation">,</span> args<span class="token operator">=</span><span class="token punctuation">(</span>future_question<span class="token punctuation">.</span><span class="token builtin">id</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        response <span class="token operator">=</span> self<span class="token punctuation">.</span>client<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>assertEqual<span class="token punctuation">(</span>response<span class="token punctuation">.</span>status_code<span class="token punctuation">,</span> <span class="token number">404</span><span class="token punctuation">)</span>
+</code></pre>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-simpletabs/tabs.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"Testing","level":"2.4","depth":1,"previous":{"title":"Views & Urls & Forms","level":"2.3","depth":1,"path":"base/section3.md","ref":"base/section3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","ace","codeblock-label","simpletabs","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"codeblock-label":{},"include":{},"search-pro":{},"theme-opendocs":{},"simpletabs":{},"katex":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/django-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Django Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"base/section4.md","mtime":"2018-10-22T09:15:36.046Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-22T09:17:11.316Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+

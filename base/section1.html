@@ -1,0 +1,421 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Create a project · Django Tutorial</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="hypc">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codeblock-label/block.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-simpletabs/tabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+
+    
+    <link rel="next" href="section2.html" />
+    
+    
+    <link rel="prev" href="install.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <a href=".." class="logo">
+                <img src="../gitbook/images/logo/64.png">
+                <h1>Django Tutorial</h1>
+            </a>
+
+            
+
+            <div class="page_search_block">
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                
+                <a href="section2.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-right"></i>
+                </a>
+                
+                
+                <a href="install.html" class="btn btn-link pull-right hidden-xs">
+                    <i class="octicon octicon-chevron-left"></i>
+                </a>
+                
+            
+            </div>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">简介</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            Django简介
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="install.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Django安装
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+    <div class="panel panel-default ">
+        
+        <div class="panel-heading">
+            <h3 class="panel-title">编写第一个Django应用</h3>
+        </div>
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="section1.html" class="list-group-item active">
+        
+
+            
+
+            
+
+            Create a project
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="section2.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Models & Admin site
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="section3.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Views & Urls & Forms
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="section4.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            Testing
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                            
+                            <div class="gb-markdown book-page-inner">
+                                <h1 id="&#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;django&#x5E94;&#x7528;----create-a-project">&#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;Django&#x5E94;&#x7528; -- Create a project</h1>
+<h2 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9879;&#x76EE;">&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9879;&#x76EE;</h2>
+<p>&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">django-admin startproject mysite
+</code></pre>
+<p>&#x547D;&#x4EE4;&#x6267;&#x884C;&#x6210;&#x529F;&#x4E4B;&#x540E;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>mysite</code>&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x9879;&#x76EE;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-text">mysite/
+    manage.py
+    mysite/
+        __init__.py
+        settings.py
+        urls.py
+        wsgi.py
+</code></pre>
+<ul>
+<li>&#x5916;&#x5C42;&#x7684;<code>mysite/</code>&#x76EE;&#x5F55;&#x662F;&#x9879;&#x76EE;&#x7684;&#x6839;&#x76EE;&#x5F55;&#xFF1B;</li>
+<li><code>manage.py</code>&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;django&#x9879;&#x76EE;&#x5165;&#x53E3;&#xFF0C;
+  &#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6267;&#x884C;<code>python manage.py <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>command</span><span class="token punctuation">&gt;</span></span></code>&#x547D;&#x4EE4;&#x4E0E;django&#x9879;&#x76EE;&#x8FDB;&#x884C;&#x5404;&#x79CD;&#x4EA4;&#x4E92;&#xFF1B;</li>
+<li>&#x5185;&#x5C42;&#x7684;<code>mysite/</code>&#x76EE;&#x5F55;&#x662F;&#x4E00;&#x4E2A;&#x771F;&#x5B9E;&#x7684;Python package&#xFF0C;&#x5B83;&#x7528;&#x6765;&#x653E;&#x7F6E;&#x9879;&#x76EE;&#xFF1B;</li>
+<li><code>mysite/__init__.py</code>&#x4E00;&#x4E2A;&#x7A7A;&#x767D;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5B83;&#x7528;&#x6765;&#x544A;&#x8BC9;Python&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x662F;&#x4E00;&#x4E2A;Python package&#xFF1B;</li>
+<li><code>mysite/settings.py</code>&#xFF0C;&#x9879;&#x76EE;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x53C2;&#x8003;<a href="https://docs.djangoproject.com/en/2.1/topics/settings/" target="_blank">Django settings</a>&#xFF1B;</li>
+<li><code>mysite/urls.py</code>&#xFF0C;&#x8D1F;&#x8D23;&#x628A;URL&#x6A21;&#x5F0F;&#x6620;&#x5C04;&#x5230;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x53C2;&#x8003;<a href="https://docs.djangoproject.com/en/2.1/topics/http/urls/" target="_blank">URL dispatcher</a>&#xFF1B;</li>
+<li><code>mysite/wsgi.py</code>&#xFF0C;&#x517C;&#x5BB9;WSGI&#x7684;Web&#x670D;&#x52A1;&#x5668;&#x7684;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#xFF0C;&#x53C2;&#x8003;<a href="https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/" target="_blank">How to deploy with WSGI</a>&#x3002;</li>
+</ul>
+<h2 id="&#x8FD0;&#x884C;django&#x670D;&#x52A1;">&#x8FD0;&#x884C;Django&#x670D;&#x52A1;</h2>
+<p>&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x8FD0;&#x884C;&#x4E0B;&#x9762;&#x4EFB;&#x4E00;&#x547D;&#x4EE4;&#x542F;&#x52A8;&#x670D;&#x52A1;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x9ED8;&#x8BA4;&#x542F;&#x52A8;&#x7ED1;&#x5B9A;127.0.0.1</span>
+python manage.py runserver
+<span class="token comment"># &#x7ED1;&#x5B9A;&#x5230;127.0.0.1:8080</span>
+python manage.py runserver 8080
+<span class="token comment"># &#x7ED1;&#x5B9A;&#x5230;0.0.0.0:8080</span>
+python manage.py runserver 0.0.0.0:8080
+</code></pre>
+<h2 id="&#x521B;&#x5EFA;&#x7B2C;&#x4E00;&#x4E2A;app----polls">&#x521B;&#x5EFA;&#x7B2C;&#x4E00;&#x4E2A;App -- Polls</h2>
+<p>&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;App&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">python manage.py startapp polls
+</code></pre>
+<p>&#x547D;&#x4EE4;&#x6267;&#x884C;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x4F1A;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;<code>polls</code>&#x76EE;&#x5F55;&#xFF0C;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-text">polls/
+    __init__.py
+    admin.py
+    apps.py
+    migrations/
+        __init__.py
+    models.py
+    tests.py
+    views.py
+</code></pre>
+<h2 id="&#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;view">&#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;view</h2>
+<p>&#x6253;&#x5F00;&#x6587;&#x4EF6;<code>polls/view.py</code>&#xFF0C;&#x5E76;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>http <span class="token keyword">import</span> HttpResponse
+
+
+<span class="token keyword">def</span> <span class="token function">index</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">&quot;Hello, world. You&apos;re at the polls index.&quot;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x65B0;&#x5EFA;&#x6587;&#x4EF6;<code>polls/urls.py</code>&#xFF0C;&#x5E76;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> path
+
+<span class="token keyword">from</span> <span class="token punctuation">.</span> <span class="token keyword">import</span> views
+
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    path<span class="token punctuation">(</span><span class="token string">&apos;&apos;</span><span class="token punctuation">,</span> views<span class="token punctuation">.</span>index<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">&apos;index&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x6253;&#x5F00;<code>mysite/urls.py</code>&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x8F93;&#x5165;&#x4E0B;&#x9762;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>urls <span class="token keyword">import</span> include<span class="token punctuation">,</span> path
+
+urlpatterns <span class="token operator">=</span> <span class="token punctuation">[</span>
+    path<span class="token punctuation">(</span><span class="token string">&apos;polls/&apos;</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span><span class="token string">&apos;polls.urls&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    path<span class="token punctuation">(</span><span class="token string">&apos;admin/&apos;</span><span class="token punctuation">,</span> admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>urls<span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span>
+</code></pre>
+<p>&#x6240;&#x6709;&#x6587;&#x4EF6;&#x7F16;&#x5199;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x542F;&#x52A8;&#x670D;&#x52A1;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">python manage.py runserver
+</code></pre>
+<p>&#x6700;&#x540E;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6253;&#x5F00; <a href="http://localhost:8000/polls/" target="_blank">http://localhost:8000/polls/</a> &#x6765;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x3002;</p>
+<p><a href="https://docs.djangoproject.com/en/2.1/ref/urls/#django.urls.path" target="_blank">path</a>&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x4F20;&#x5165;4&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4E24;&#x4E2A;&#x5FC5;&#x9009;&#x53C2;&#x6570;<code>route</code>&#x3001;<code>view</code>&#xFF0C;&#x4E24;&#x4E2A;&#x53EF;&#x9009;&#x53C2;&#x6570;<code>kwargs</code>&#x3001;<code>name</code>&#x3002;</p>
+<h3 id="path&#x53C2;&#x6570;&#xFF1A;route">path&#x53C2;&#x6570;&#xFF1A;route</h3>
+<p>route&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;URL&#x6A21;&#x5F0F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;Django&#x4ECE;urlpatterns&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x6A21;&#x5F0F;&#x5F00;&#x59CB;&#xFF0C;
+&#x6CBF;&#x7740;&#x5217;&#x8868;&#x5411;&#x4E0B;&#x79FB;&#x52A8;&#xFF0C;&#x5C06;&#x8BF7;&#x6C42;&#x7684;URL&#x4E0E;&#x6BCF;&#x4E2A;&#x6A21;&#x5F0F;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x5230;&#x5339;&#x914D;&#x7684;&#x6A21;&#x5F0F;&#x3002;</p>
+<h3 id="path&#x53C2;&#x6570;&#xFF1A;view">path&#x53C2;&#x6570;&#xFF1A;view</h3>
+<p>&#x5F53;Django&#x627E;&#x5230;&#x5339;&#x914D;&#x7684;&#x6A21;&#x5F0F;&#x65F6;&#xFF0C;&#x5B83;&#x8C03;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x89C6;&#x56FE;&#x51FD;&#x6570;&#xFF0C;&#x5176;&#x4E2D;HttpRequest&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;
+&#x5E76;&#x4E14;&#x8DEF;&#x7531;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x201C;&#x6355;&#x83B7;&#x201D;&#x503C;&#x4F5C;&#x4E3A;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x3002;</p>
+<h3 id="path&#x53C2;&#x6570;&#xFF1A;kwargs">path&#x53C2;&#x6570;&#xFF1A;kwargs</h3>
+<p>&#x4EFB;&#x610F;&#x5173;&#x952E;&#x5B57;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x5728;&#x5B57;&#x5178;&#x4E2D;&#x4F20;&#x9012;&#x5230;&#x76EE;&#x6807;&#x89C6;&#x56FE;&#x3002;</p>
+<h3 id="path&#x53C2;&#x6570;&#xFF1A;name">path&#x53C2;&#x6570;&#xFF1A;name</h3>
+<p>&#x547D;&#x540D;&#x60A8;&#x7684;URL&#x53EF;&#x8BA9;&#x60A8;&#x4ECE;Django&#x7684;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x660E;&#x786E;&#x5730;&#x5F15;&#x7528;&#x5B83;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5728;&#x6A21;&#x677F;&#x4E2D;&#x3002;
+&#x6B64;&#x5F3A;&#x5927;&#x529F;&#x80FD;&#x5141;&#x8BB8;&#x60A8;&#x5728;&#x4EC5;&#x89E6;&#x6478;&#x5355;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x540C;&#x65F6;&#x5BF9;&#x9879;&#x76EE;&#x7684;URL&#x6A21;&#x5F0F;&#x8FDB;&#x884C;&#x5168;&#x5C40;&#x66F4;&#x6539;&#x3002;</p>
+
+                            </div>
+                            
+                        
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-ace/ace.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-simpletabs/tabs.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"Create a project","level":"2.1","depth":1,"next":{"title":"Models & Admin site","level":"2.2","depth":1,"path":"base/section2.md","ref":"base/section2.md","articles":[]},"previous":{"title":"Django安装","level":"1.2","depth":1,"path":"base/install.md","ref":"base/install.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","ace","codeblock-label","simpletabs","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"codeblock-label":{},"include":{},"search-pro":{},"theme-opendocs":{},"simpletabs":{},"katex":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/django-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Django Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"base/section1.md","mtime":"2018-10-22T09:15:36.046Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-22T09:17:11.316Z"},"basePath":"..","book":{"language":""}});
+})();
+</script>
+
+        
+    </body>
+</html>
+
