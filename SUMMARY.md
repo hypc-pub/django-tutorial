@@ -9,3 +9,4 @@
 
 * [创建一个项目](base/section1.md)
 * [Models & Admin site](base/section2.md)
+* [Views & Urls & Forms](base/section3.md)
