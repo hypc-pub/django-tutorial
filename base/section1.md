@@ -10,7 +10,7 @@ django-admin startproject mysite
 
 命令执行成功之后会在当前目录下创建一个`mysite`的项目，项目结构如下：
 
-```text
+```
 mysite/
     manage.py
     mysite/
@@ -52,7 +52,7 @@ python manage.py startapp polls
 
 命令执行成功后，会在项目根目录下新建一个`polls`目录，目录结构如下：
 
-```text
+```
 polls/
     __init__.py
     admin.py
