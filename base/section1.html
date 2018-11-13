@@ -251,6 +251,22 @@
 
         
     
+        
+        <a href="in_the_end.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            In the end
+
+        
+        </a>
+        
+
+        
+    
 
         </div>
     </div>
@@ -272,15 +288,14 @@
 <pre class="language-"><code class="lang-bash">django-admin startproject mysite
 </code></pre>
 <p>&#x547D;&#x4EE4;&#x6267;&#x884C;&#x6210;&#x529F;&#x4E4B;&#x540E;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;<code>mysite</code>&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x9879;&#x76EE;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre class="language-"><code class="lang-text">mysite/
+<pre class="language-"><code>mysite/
     manage.py
     mysite/
         __init__.py
         settings.py
         urls.py
         wsgi.py
-</code></pre>
-<ul>
+</code></pre><ul>
 <li>&#x5916;&#x5C42;&#x7684;<code>mysite/</code>&#x76EE;&#x5F55;&#x662F;&#x9879;&#x76EE;&#x7684;&#x6839;&#x76EE;&#x5F55;&#xFF1B;</li>
 <li><code>manage.py</code>&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;django&#x9879;&#x76EE;&#x5165;&#x53E3;&#xFF0C;
   &#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6267;&#x884C;<code>python manage.py <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>command</span><span class="token punctuation">&gt;</span></span></code>&#x547D;&#x4EE4;&#x4E0E;django&#x9879;&#x76EE;&#x8FDB;&#x884C;&#x5404;&#x79CD;&#x4EA4;&#x4E92;&#xFF1B;</li>
@@ -304,7 +319,7 @@ python manage.py runserver 0.0.0.0:8080
 <pre class="language-"><code class="lang-bash">python manage.py startapp polls
 </code></pre>
 <p>&#x547D;&#x4EE4;&#x6267;&#x884C;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x4F1A;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;<code>polls</code>&#x76EE;&#x5F55;&#xFF0C;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre class="language-"><code class="lang-text">polls/
+<pre class="language-"><code>polls/
     __init__.py
     admin.py
     apps.py
@@ -313,8 +328,7 @@ python manage.py runserver 0.0.0.0:8080
     models.py
     tests.py
     views.py
-</code></pre>
-<h2 id="&#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;view">&#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;view</h2>
+</code></pre><h2 id="&#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;view">&#x7F16;&#x5199;&#x7B2C;&#x4E00;&#x4E2A;view</h2>
 <p>&#x6253;&#x5F00;&#x6587;&#x4EF6;<code>polls/view.py</code>&#xFF0C;&#x5E76;&#x8F93;&#x5165;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
 <pre class="language-"><code class="lang-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>http <span class="token keyword">import</span> HttpResponse
 
@@ -411,7 +425,7 @@ urlpatterns <span class="token operator">=</span> <span class="token punctuation
 
 <script>
 (function() {
-    gitbook.page.hasChanged({"page":{"title":"Create a project","level":"2.1","depth":1,"next":{"title":"Models & Admin site","level":"2.2","depth":1,"path":"base/section2.md","ref":"base/section2.md","articles":[]},"previous":{"title":"Django安装","level":"1.2","depth":1,"path":"base/install.md","ref":"base/install.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","ace","codeblock-label","simpletabs","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"codeblock-label":{},"include":{},"search-pro":{},"theme-opendocs":{},"simpletabs":{},"katex":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/django-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Django Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"base/section1.md","mtime":"2018-10-22T10:07:21.071Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-22T10:08:56.331Z"},"basePath":"..","book":{"language":""}});
+    gitbook.page.hasChanged({"page":{"title":"Create a project","level":"2.1","depth":1,"next":{"title":"Models & Admin site","level":"2.2","depth":1,"path":"base/section2.md","ref":"base/section2.md","articles":[]},"previous":{"title":"Django安装","level":"1.2","depth":1,"path":"base/install.md","ref":"base/install.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","ace","codeblock-label","simpletabs","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"codeblock-label":{},"include":{},"search-pro":{},"theme-opendocs":{},"simpletabs":{},"katex":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/django-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Django Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"base/section1.md","mtime":"2018-11-13T12:15:29.040Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-13T12:16:59.160Z"},"basePath":"..","book":{"language":""}});
 })();
 </script>
 
