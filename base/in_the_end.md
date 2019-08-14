@@ -33,6 +33,7 @@ mysite/
             __init__.py
             0001_initial.py
         models.py
+        forms.py
         tests.py
         urls.py
         views.py

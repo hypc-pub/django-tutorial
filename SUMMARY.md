@@ -1,7 +1,5 @@
 # SUMMARY
 
-## 简介
-
 * [Django简介](README.md)
 * [Django安装](base/install.md)
 
