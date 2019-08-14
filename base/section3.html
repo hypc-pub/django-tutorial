@@ -133,10 +133,6 @@
     
     <div class="panel panel-default ">
         
-        <div class="panel-heading">
-            <h3 class="panel-title">简介</h3>
-        </div>
-        
 
         <div class="list-group">
             
@@ -351,7 +347,7 @@ urlpatterns <span class="token operator">=</span> <span class="token punctuation
 <span class="token keyword">class</span> <span class="token class-name">IndexView</span><span class="token punctuation">(</span>View<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">)</span><span class="token punctuation">:</span>
         form <span class="token operator">=</span> QuestionIndexForm<span class="token punctuation">(</span>request<span class="token punctuation">.</span>GET<span class="token punctuation">)</span>
-        <span class="token keyword">if</span> <span class="token operator">not</span> form<span class="token punctuation">.</span>is_valid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> form<span class="token punctuation">.</span>is_valid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
             <span class="token keyword">return</span> HttpResponse<span class="token punctuation">(</span><span class="token string">&apos;&apos;</span><span class="token punctuation">,</span> status<span class="token operator">=</span><span class="token number">422</span><span class="token punctuation">)</span>
 
         data <span class="token operator">=</span> form<span class="token punctuation">.</span>cleaned_data
@@ -414,9 +410,13 @@ urlpatterns <span class="token operator">=</span> <span class="token punctuation
     <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
     
 
+    
+    <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+    
+
 <script>
 (function() {
-    gitbook.page.hasChanged({"page":{"title":"Views & Urls & Forms","level":"2.3","depth":1,"next":{"title":"Testing","level":"2.4","depth":1,"path":"base/section4.md","ref":"base/section4.md","articles":[]},"previous":{"title":"Models & Admin site","level":"2.2","depth":1,"path":"base/section2.md","ref":"base/section2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","ace","codeblock-label","simpletabs","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"codeblock-label":{},"include":{},"search-pro":{},"theme-opendocs":{},"simpletabs":{},"katex":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/django-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Django Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"base/section3.md","mtime":"2018-11-13T12:15:29.044Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-13T12:16:59.160Z"},"basePath":"..","book":{"language":""}});
+    gitbook.page.hasChanged({"page":{"title":"Views & Urls & Forms","level":"2.3","depth":1,"next":{"title":"Testing","level":"2.4","depth":1,"path":"base/section4.md","ref":"base/section4.md","articles":[]},"previous":{"title":"Models & Admin site","level":"2.2","depth":1,"path":"base/section2.md","ref":"base/section2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","ace","codeblock-label","simpletabs","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"codeblock-label":{},"include":{},"search-pro":{},"theme-opendocs":{},"simpletabs":{},"katex":{},"ga":{"configuration":"auto","token":"UA-131598830-2"},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/django-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Django Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"base/section3.md","mtime":"2019-08-14T08:49:25.958Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-14T08:51:06.129Z"},"basePath":"..","book":{"language":""}});
 })();
 </script>
 

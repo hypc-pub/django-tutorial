@@ -133,10 +133,6 @@
     
     <div class="panel panel-default ">
         
-        <div class="panel-heading">
-            <h3 class="panel-title">简介</h3>
-        </div>
-        
 
         <div class="list-group">
             
@@ -305,23 +301,23 @@
 </code></pre>
 <h2 id="&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;">&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;</h2>
 <p>&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#xFF1A;</p>
-<pre class="language-"><code class="lang-bash">$ python manage.py <span class="token function">test</span> polls
-Creating <span class="token function">test</span> database <span class="token keyword">for</span> <span class="token function">alias</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">..</span>.
-System check identified no issues <span class="token punctuation">(</span>0 silenced<span class="token punctuation">)</span>.
+<pre class="language-"><code class="lang-bash">$ python manage.py <span class="token builtin class-name">test</span> polls
+Creating <span class="token builtin class-name">test</span> database <span class="token keyword">for</span> <span class="token builtin class-name">alias</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">..</span>.
+System check identified no issues <span class="token punctuation">(</span><span class="token number">0</span> silenced<span class="token punctuation">)</span>.
 F
 <span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
 FAIL: test_was_published_recently_with_future_question <span class="token punctuation">(</span>polls.tests.QuestionModelTests<span class="token punctuation">)</span>
 ----------------------------------------------------------------------
 Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span>:
-  File <span class="token string">&quot;/path/to/mysite/polls/tests.py&quot;</span>, line 16, <span class="token keyword">in</span> test_was_published_recently_with_future_question
+  File <span class="token string">&quot;/path/to/mysite/polls/tests.py&quot;</span>, line <span class="token number">16</span>, <span class="token keyword">in</span> test_was_published_recently_with_future_question
     self.assertIs<span class="token punctuation">(</span>future_question.was_published_recently<span class="token punctuation">(</span><span class="token punctuation">)</span>, False<span class="token punctuation">)</span>
 AssertionError: True is not False
 
 ----------------------------------------------------------------------
-Ran 1 <span class="token function">test</span> <span class="token keyword">in</span> 0.001s
+Ran <span class="token number">1</span> <span class="token builtin class-name">test</span> <span class="token keyword">in</span> <span class="token number">0</span>.001s
 
-FAILED <span class="token punctuation">(</span>failures<span class="token operator">=</span>1<span class="token punctuation">)</span>
-Destroying <span class="token function">test</span> database <span class="token keyword">for</span> <span class="token function">alias</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">..</span>.
+FAILED <span class="token punctuation">(</span>failures<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+Destroying <span class="token builtin class-name">test</span> database <span class="token keyword">for</span> <span class="token builtin class-name">alias</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">..</span>.
 </code></pre>
 <p>&#x6267;&#x884C;&#x5B8C;&#x53D1;&#x73B0;&#x4E00;&#x4E2A;bug&#xFF0C;&#x6253;&#x5F00;&#x6587;&#x4EF6;<code>polls/models.py</code>&#x4FEE;&#x590D;&#x8FD9;&#x4E2A;bug&#xFF1A;</p>
 <pre class="language-"><code class="lang-python"><span class="token keyword">def</span> <span class="token function">was_published_recently</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
@@ -329,15 +325,15 @@ Destroying <span class="token function">test</span> database <span class="token 
     <span class="token keyword">return</span> now <span class="token operator">-</span> datetime<span class="token punctuation">.</span>timedelta<span class="token punctuation">(</span>days<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&lt;=</span> self<span class="token punctuation">.</span>pub_date <span class="token operator">&lt;=</span> now
 </code></pre>
 <p>&#x518D;&#x6B21;&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#xFF1A;</p>
-<pre class="language-"><code class="lang-bash">$ python manage.py <span class="token function">test</span> polls
-Creating <span class="token function">test</span> database <span class="token keyword">for</span> <span class="token function">alias</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">..</span>.
-System check identified no issues <span class="token punctuation">(</span>0 silenced<span class="token punctuation">)</span>.
-<span class="token keyword">.</span>
+<pre class="language-"><code class="lang-bash">$ python manage.py <span class="token builtin class-name">test</span> polls
+Creating <span class="token builtin class-name">test</span> database <span class="token keyword">for</span> <span class="token builtin class-name">alias</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">..</span>.
+System check identified no issues <span class="token punctuation">(</span><span class="token number">0</span> silenced<span class="token punctuation">)</span>.
+<span class="token builtin class-name">.</span>
 ----------------------------------------------------------------------
-Ran 1 <span class="token function">test</span> <span class="token keyword">in</span> 0.001s
+Ran <span class="token number">1</span> <span class="token builtin class-name">test</span> <span class="token keyword">in</span> <span class="token number">0</span>.001s
 
 OK
-Destroying <span class="token function">test</span> database <span class="token keyword">for</span> <span class="token function">alias</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">..</span>.
+Destroying <span class="token builtin class-name">test</span> database <span class="token keyword">for</span> <span class="token builtin class-name">alias</span> <span class="token string">&apos;default&apos;</span><span class="token punctuation">..</span>.
 </code></pre>
 <h2 id="&#x6D4B;&#x8BD5;view">&#x6D4B;&#x8BD5;View</h2>
 <p>Django&#x63D0;&#x4F9B;<a href="https://docs.djangoproject.com/en/2.1/topics/testing/tools/#django.test.Client" target="_blank">Client</a>&#x7528;&#x6765;&#x6D4B;&#x8BD5;View&#xFF0C;</p>
@@ -432,9 +428,13 @@ Destroying <span class="token function">test</span> database <span class="token 
     <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
     
 
+    
+    <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+    
+
 <script>
 (function() {
-    gitbook.page.hasChanged({"page":{"title":"Testing","level":"2.4","depth":1,"next":{"title":"In the end","level":"2.5","depth":1,"path":"base/in_the_end.md","ref":"base/in_the_end.md","articles":[]},"previous":{"title":"Views & Urls & Forms","level":"2.3","depth":1,"path":"base/section3.md","ref":"base/section3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","ace","codeblock-label","simpletabs","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"codeblock-label":{},"include":{},"search-pro":{},"theme-opendocs":{},"simpletabs":{},"katex":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/django-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Django Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"base/section4.md","mtime":"2018-11-13T12:15:29.044Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-13T12:16:59.160Z"},"basePath":"..","book":{"language":""}});
+    gitbook.page.hasChanged({"page":{"title":"Testing","level":"2.4","depth":1,"next":{"title":"In the end","level":"2.5","depth":1,"path":"base/in_the_end.md","ref":"base/in_the_end.md","articles":[]},"previous":{"title":"Views & Urls & Forms","level":"2.3","depth":1,"path":"base/section3.md","ref":"base/section3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","ace","codeblock-label","simpletabs","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"codeblock-label":{},"include":{},"search-pro":{},"theme-opendocs":{},"simpletabs":{},"katex":{},"ga":{"configuration":"auto","token":"UA-131598830-2"},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/django-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Django Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"base/section4.md","mtime":"2019-08-14T08:49:25.958Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-14T08:51:06.129Z"},"basePath":"..","book":{"language":""}});
 })();
 </script>
 

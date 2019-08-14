@@ -133,10 +133,6 @@
     
     <div class="panel panel-default ">
         
-        <div class="panel-heading">
-            <h3 class="panel-title">简介</h3>
-        </div>
-        
 
         <div class="list-group">
             
@@ -346,7 +342,7 @@
 </code></pre>
 <p>&#x8BBE;&#x7F6E;<a href="https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS" target="_blank">INSTALLED_APPS</a>&#x540E;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x547D;&#x4EE4;&#xFF1A;</p>
 <pre class="language-"><code class="lang-bash">$ python manage.py makemigrations polls
-Migrations <span class="token keyword">for</span> <span class="token string">&apos;polls&apos;</span><span class="token keyword">:</span>
+Migrations <span class="token keyword">for</span> <span class="token string">&apos;polls&apos;</span><span class="token builtin class-name">:</span>
   polls/migrations/0001_initial.py:
     - Create model Choice
     - Create model Question
@@ -442,7 +438,7 @@ datetime<span class="token punctuation">.</span>datetime<span class="token punct
 <span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> Question<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token builtin">id</span><span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span>
 Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-DoesNotExist<span class="token punctuation">:</span> Question matching query does <span class="token operator">not</span> exist<span class="token punctuation">.</span>
+DoesNotExist<span class="token punctuation">:</span> Question matching query does <span class="token keyword">not</span> exist<span class="token punctuation">.</span>
 
 <span class="token comment"># Lookup by a primary key is the most common case, so Django provides a</span>
 <span class="token comment"># shortcut for primary-key exact lookups.</span>
@@ -569,9 +565,13 @@ admin<span class="token punctuation">.</span>site<span class="token punctuation"
     <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
     
 
+    
+    <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+    
+
 <script>
 (function() {
-    gitbook.page.hasChanged({"page":{"title":"Models & Admin site","level":"2.2","depth":1,"next":{"title":"Views & Urls & Forms","level":"2.3","depth":1,"path":"base/section3.md","ref":"base/section3.md","articles":[]},"previous":{"title":"Create a project","level":"2.1","depth":1,"path":"base/section1.md","ref":"base/section1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","ace","codeblock-label","simpletabs","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"codeblock-label":{},"include":{},"search-pro":{},"theme-opendocs":{},"simpletabs":{},"katex":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/django-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Django Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"base/section2.md","mtime":"2018-11-13T12:15:29.040Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-13T12:16:59.160Z"},"basePath":"..","book":{"language":""}});
+    gitbook.page.hasChanged({"page":{"title":"Models & Admin site","level":"2.2","depth":1,"next":{"title":"Views & Urls & Forms","level":"2.3","depth":1,"path":"base/section3.md","ref":"base/section3.md","articles":[]},"previous":{"title":"Create a project","level":"2.1","depth":1,"path":"base/section1.md","ref":"base/section1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-opendocs","advanced-emoji","ace","codeblock-label","simpletabs","include","katex","-highlight","prism","-lunr","-search","search-pro","-sharing","-fontsettings","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"ace":{},"codeblock-label":{},"include":{},"search-pro":{},"theme-opendocs":{},"simpletabs":{},"katex":{},"ga":{"configuration":"auto","token":"UA-131598830-2"},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","repository":{"type":"git","url":"https://github.com/hypc-pub/django-tutorial"},"author":"hypc","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Django Tutorial","gitbook":">=3.0.0","description":""},"file":{"path":"base/section2.md","mtime":"2019-08-14T08:49:25.958Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-14T08:51:06.129Z"},"basePath":"..","book":{"language":""}});
 })();
 </script>
 
